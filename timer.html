@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:#4887b0;
+        }
+        
+        input{
+            box-shadow: 0px 0px 1px;
+            background-color: rgb(90, 105, 202);
+            width: 80px;
+            height: 25px;
+            color: aliceblue;
+            font-size: 20px;
+            text-align: right;  
+        }
+    </style>
+</head>
+<body>
+    <h1>I am Timer</h1>
+    <input type="number" name="" id="input3">
+    <input type="number" name="" id="input2">
+    <input type="number" name="" id="input1">
+    
+</body>
+</html>
+<script>
+    let sec = 0;
+    let min = 0;
+    let hours = 0;
+    setInterval(play,1000)
+    function play () {
+        sec++
+        document.getElementById('input1').value = sec
+        if(sec>=60)
+        {
+            sec = 0;
+            min++
+            document.getElementById('input2').value = min
+            if(min>=60)
+            {
+                min=0
+                hours++
+                document.getElementById('input3').value = hours
+            }
+        }
+           
+        
+    }
+</script>
+
